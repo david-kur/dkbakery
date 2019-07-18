@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './index.scss';
-import MenuItem from '../menu-item';
+import SectionItem from './section-item';
 
-const Menu = () => {
+const Sections = () => {
   const [sections] = useState([
     {
       id: 1,
@@ -38,12 +38,12 @@ const Menu = () => {
     }
   ]);
   return (
-    <div className="menu">
+    <div className="sections">
       {sections.map(({ id, ...props }) => (
-        <MenuItem key={id} {...props} />
+        <SectionItem key={id} {...props} />
       ))}
     </div>
   );
 };
 
-export default Menu;
+export default Sections;

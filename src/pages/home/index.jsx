@@ -1,10 +1,10 @@
 import React from 'react';
 import './index.scss';
-import Menu from '../../components/menu';
+import Sections from '../../components/sections';
 
 const Home = () => (
   <div className="home">
-    <Menu />
+    <Sections />
   </div>
 );
 

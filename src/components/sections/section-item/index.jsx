@@ -2,9 +2,9 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 import './index.scss';
 
-const MenuItem = ({ title, size, imageUrl, linkUrl, history, match }) => (
+const SectionItem = ({ title, size, imageUrl, linkUrl, history, match }) => (
   <div
-    className={`${size} menu-item`}
+    className={`${size} section-item`}
     onClick={() => history.push(`${match.url}${linkUrl}`)}
   >
     <div
@@ -17,4 +17,4 @@ const MenuItem = ({ title, size, imageUrl, linkUrl, history, match }) => (
   </div>
 );
 
-export default withRouter(MenuItem);
+export default withRouter(SectionItem);
