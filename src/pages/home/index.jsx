@@ -3,7 +3,7 @@ import './index.scss';
 import Menu from '../../components/menu';
 
 const Home = () => (
-  <div className="homepage">
+  <div className="home">
     <Menu />
   </div>
 );

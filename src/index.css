@@ -1,3 +1,8 @@
 body {
   font-family: 'Quattrocento Sans', sans-serif;
 }
+
+a {
+  text-decoration: none;
+  color: #333;
+}
