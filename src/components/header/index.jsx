@@ -4,14 +4,24 @@ import './index.scss';
 
 const Header = () => (
   <div className="header">
-    <Link to="/">DK Store</Link>
+    <h2>
+      <Link className="brand-container" to="/">
+        DK Bakery
+      </Link>
+    </h2>
     <div className="options">
-      <Link className="option" to="/order">
-        ORDER
-      </Link>
-      <Link className="option" to="/contact">
-        CONTACT
-      </Link>
+      <ul>
+        <li>
+          <Link className="option" to="/order">
+            ORDER
+          </Link>
+        </li>
+        <li>
+          <Link className="option" to="/contact">
+            CONTACT
+          </Link>
+        </li>
+      </ul>
     </div>
   </div>
 );
