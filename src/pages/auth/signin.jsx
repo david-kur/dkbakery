@@ -1,18 +1,30 @@
 import React from 'react';
 import './index.scss';
-import InputForm from '../input-form';
-import InputButton from '../input-button';
-import useForm from '../custom-hooks/useForm';
-import { signInWithGoogle } from '../../firebase.config';
+import InputForm from '../../components/input-form';
+import InputButton from '../../components/input-button';
+import useForm from '../../components/custom-hooks/useForm';
+import { signInWithGoogle, firebaseAuth } from '../../firebase.config';
 
 const SignIn = () => {
-  const { values, handleChange, handleSubmit } = useForm(submit);
-  function submit() {
-    console.log(values);
+  const { values, handleChange, handleSubmit, resetValues } = useForm(
+    {
+      email: '',
+      password: ''
+    },
+    submit
+  );
+  async function submit() {
+    const { email, password } = values
+    try {
+      await firebaseAuth.signInWithEmailAndPassword(email, password)
+      resetValues()
+    } catch (error) {
+      console.error(error)
+    }
   }
 
   return (
-    <div className="sign-in">
+    <div className="sign-in-up">
       <h2>Have an account?</h2>
       <span>Sign in with email and password</span>
       <form onSubmit={handleSubmit}>

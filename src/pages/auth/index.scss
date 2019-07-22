@@ -1,7 +1,21 @@
 .auth {
   border: 1px solid #afafaf;
   border-radius: 10px;
-  width: 40vw;
-  margin: auto;
-  padding: 50px;
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto;
+}
+
+.sign-in-up {
+  margin: 20px auto;
+  width: 300px;
+
+  .buttons {
+    text-align: center;
+  }
+
+  .input-button {
+    margin: 5px auto;
+  }
 }

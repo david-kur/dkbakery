@@ -3,7 +3,12 @@ import './index.scss';
 
 const InputForm = ({ label, onChange, value, ...restProps }) => (
   <div className="group">
-    <input className="input-form" onChange={onChange} {...restProps} />
+    <input
+      className="input-form"
+      onChange={onChange}
+      value={value}
+      {...restProps}
+    />
     {label ? (
       <label className={`${value ? 'shrink' : ''} input-form-label`}>
         {label}
