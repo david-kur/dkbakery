@@ -8,7 +8,6 @@
   .brand-container {
     height: 100%;
     width: 70px;
-    padding: 0px 80px;
   }
 }
 
@@ -16,11 +15,12 @@
   width: 50%;
   height: 100%;
   display: flex;
-  padding: 0px 80px;
   align-items: center;
   justify-content: flex-end;
 
   .option {
+    display: flex;
     padding: 15px 15px;
+    cursor: pointer;
   }
 }

@@ -1,5 +1,6 @@
 body {
   font-family: 'Quattrocento Sans', sans-serif;
+  padding: 20px 80px;
 }
 
 a {
@@ -13,4 +14,8 @@ ul {
 
 .header ul {
   display: flex;
+}
+
+* {
+  box-sizing: border-box;
 }
