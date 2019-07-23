@@ -1,9 +1,16 @@
 import React from 'react';
 import './index.scss';
 
-const InputButton = ({ children, isGoogleSignIn, ...restProps }) => (
+const InputButton = ({
+  children,
+  isGoogleSignIn,
+  isInverted,
+  ...restProps
+}) => (
   <button
-    className={`${isGoogleSignIn ? 'google-sign-in' : ''} input-button`}
+    className={`${isInverted ? 'inverted' : ''} ${
+      isGoogleSignIn ? 'google-sign-in' : ''
+    } input-button`}
     {...restProps}
   >
     {children}

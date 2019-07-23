@@ -4,6 +4,7 @@
   flex-direction: column;
   height: 350px;
   align-items: center;
+  position: relative;
 
   .image {
     width: 100%;
@@ -19,6 +20,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 18px;
+    color: #707070;
 
     .name {
       width: 90%;
@@ -28,5 +30,12 @@
     .price {
       width: 10%;
     }
+  }
+
+  .input-button {
+    width: 80%;
+    opacity: 0.8;
+    position: absolute;
+    top: 250px;
   }
 }

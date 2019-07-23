@@ -1,4 +1,6 @@
 import React from 'react';
+import InputButton from '../input-button';
+
 import './index.scss';
 
 const MenuItem = ({ id, name, price, imageUrl }) => (
@@ -8,6 +10,7 @@ const MenuItem = ({ id, name, price, imageUrl }) => (
       <span className="name">{name}</span>
       <span className="price">{price}</span>
     </div>
+    <InputButton isInverted>Add to cart</InputButton>
   </div>
 );
 
