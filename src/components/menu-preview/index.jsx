@@ -9,8 +9,8 @@ const MenuPreview = ({ title, items }) => {
       <div className="preview">
         {items
           .filter((item, index) => index < 4)
-          .map(({ id, ...restProps }) => (
-            <MenuItem key={id} {...restProps} />
+          .map(item => (
+            <MenuItem key={item.id} item={item} />
           ))}
       </div>
     </div>
