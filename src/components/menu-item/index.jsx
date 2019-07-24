@@ -11,7 +11,7 @@ const MenuItem = ({ item, addItem }) => {
       <div className="image" style={{ backgroundImage: `url(${imageUrl})` }} />
       <div className="menu-footer">
         <span className="name">{name}</span>
-        <span className="price">{price}</span>
+        <span className="price">${price}</span>
       </div>
       <InputButton isInverted onClick={() => addItem(item)}>
         Add to cart
