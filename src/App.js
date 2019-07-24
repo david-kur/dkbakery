@@ -8,6 +8,7 @@ import Auth from './pages/auth';
 import { firebaseAuth, createUserProfile } from './firebase.config';
 import { connect } from 'react-redux';
 import { setCurrentUser } from './redux/user/actions';
+import { selectCurrentUser } from './redux/user/reducer';
 
 const App = ({ setCurrentUser, currentUser }) => {
   useEffect(() => {
@@ -43,7 +44,7 @@ const App = ({ setCurrentUser, currentUser }) => {
 };
 
 const mapStateToProps = state => ({
-  currentUser: state.user.currentUser
+  currentUser: selectCurrentUser(state)
 });
 
 const mapDispatchToProps = dispatch => ({

@@ -1,4 +1,5 @@
 import { SET_CURRENT_USER } from './types';
+import { createSelector } from 'reselect';
 
 const INITIAL_STATE = {
   currentUser: null
@@ -15,5 +16,13 @@ const userReducer = (state = INITIAL_STATE, { type, payload }) => {
       return state;
   }
 };
+
+// SELECTOR
+const selectUser = state => state.user;
+
+export const selectCurrentUser = createSelector(
+  [selectUser],
+  user => user.currentUser
+);
 
 export default userReducer;
