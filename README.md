@@ -1,5 +1,8 @@
-DK Store
+DK Bakery
 
-Online store web app using:
+Online bakery store web app using:
 
 - React Hooks
+- React Redux
+- Firebase
+- Reselect Memoization
