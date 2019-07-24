@@ -1,5 +1,6 @@
 import { TOGGLE_CART, ADD_ITEM } from './types';
 import { addItemToCart } from './utility';
+import { createSelector } from 'reselect';
 const INITIAL_STATE = { hidden: true, items: [] };
 
 const cartReducer = (state = INITIAL_STATE, { type, payload }) => {
@@ -12,5 +13,18 @@ const cartReducer = (state = INITIAL_STATE, { type, payload }) => {
       return state;
   }
 };
+
+// SELECTOR
+const selectCart = state => state.cart;
+
+export const selectItemsInCart = createSelector(
+  [selectCart],
+  cart => cart.items
+);
+
+export const selectCountItemsInCart = createSelector(
+  [selectItemsInCart],
+  items => items.reduce((total, item) => total + item.qty, 0)
+);
 
 export default cartReducer;
