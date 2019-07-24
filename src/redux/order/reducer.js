@@ -14,9 +14,22 @@ const orderReducer = (state = INITIAL_STATE, { type }) => {
 
 // SELECTOR
 const selectOrder = state => state.order;
+const MENU_ID_MAP = {
+  cookies: 1,
+  cakes: 2,
+  breads: 3,
+  desserts: 4,
+  drinks: 5
+};
 export const selectMenu = createSelector(
   [selectOrder],
   order => order.menu
 );
+
+export const selectCategory = menuUrlParam =>
+  createSelector(
+    [selectMenu],
+    menu => menu.find(category => category.id === MENU_ID_MAP[menuUrlParam])
+  );
 
 export default orderReducer;

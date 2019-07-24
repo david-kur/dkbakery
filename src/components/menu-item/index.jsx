@@ -6,6 +6,7 @@ import { addItem } from '../../redux/cart/actions';
 
 const MenuItem = ({ item, addItem }) => {
   const { name, price, imageUrl } = item;
+
   return (
     <div className="menu-item">
       <div className="image" style={{ backgroundImage: `url(${imageUrl})` }} />
