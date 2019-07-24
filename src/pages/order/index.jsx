@@ -1,18 +1,10 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import MenuPreview from '../../components/menu-preview';
-import { selectMenu } from '../../redux/order/reducer';
+import MenuOverview from '../../components/menu-overview';
 
-const Order = ({ menu }) => (
+const Order = () => (
   <div>
-    {menu.map(({ id, ...restProps }) => (
-      <MenuPreview key={id} {...restProps} />
-    ))}
+    <MenuOverview />
   </div>
 );
 
-const mapStateToProps = state => ({
-  menu: selectMenu(state)
-});
-
-export default connect(mapStateToProps)(Order);
+export default Order;
