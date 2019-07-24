@@ -2,7 +2,7 @@ import React from 'react';
 import './index.scss';
 import { connect } from 'react-redux';
 import MenuPreview from '../menu-preview';
-import { selectMenu } from '../../redux/order/reducer';
+import { selectMenuForPreview } from '../../redux/order/reducer';
 
 const MenuOverview = ({ menu }) => (
   <div className="menu-overview">
@@ -13,7 +13,7 @@ const MenuOverview = ({ menu }) => (
 );
 
 const mapStateToProps = state => ({
-  menu: selectMenu(state)
+  menu: selectMenuForPreview(state)
 });
 
 export default connect(mapStateToProps)(MenuOverview);

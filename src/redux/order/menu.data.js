@@ -1,5 +1,5 @@
-const MENU_DATA = [
-  {
+const MENU_DATA = {
+  cookies: {
     id: 1,
     title: 'Cookies',
     routeName: 'cookies',
@@ -30,7 +30,7 @@ const MENU_DATA = [
       }
     ]
   },
-  {
+  cakes: {
     id: 2,
     title: 'Cakes',
     routeName: 'cakes',
@@ -67,7 +67,7 @@ const MENU_DATA = [
       }
     ]
   },
-  {
+  breads: {
     id: 3,
     title: 'Breads',
     routeName: 'breads',
@@ -110,7 +110,7 @@ const MENU_DATA = [
       }
     ]
   },
-  {
+  desserts: {
     id: 4,
     title: 'Desserts',
     routeName: 'desserts',
@@ -141,7 +141,7 @@ const MENU_DATA = [
       }
     ]
   },
-  {
+  drinks: {
     id: 5,
     title: 'Drinks',
     routeName: 'drinks',
@@ -184,6 +184,6 @@ const MENU_DATA = [
       }
     ]
   }
-];
+};
 
 export default MENU_DATA;
