@@ -5,6 +5,7 @@ import Header from './components/header';
 import Home from './pages/home';
 import Order from './pages/order';
 import Auth from './pages/auth';
+import Checkout from './pages/checkout';
 import { firebaseAuth, createUserProfile } from './firebase.config';
 import { connect } from 'react-redux';
 import { setCurrentUser } from './redux/user/actions';
@@ -33,8 +34,10 @@ const App = ({ setCurrentUser, currentUser }) => {
       <Header />
       <Switch>
         <Route exact path="/" component={Home} />
+        <Route exact path="/checkout" component={Checkout} />
         <Route path="/order" component={Order} />
         <Route
+          exact
           path="/signin"
           render={() => (currentUser ? <Redirect to="/" /> : <Auth />)}
         />

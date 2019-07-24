@@ -42,4 +42,10 @@
       border: 1px solid white;
     }
   }
+
+  &.is-disabled {
+    background-color: white;
+    color: #a0a0a0;
+    border: 1px dashed #707070;
+  }
 }

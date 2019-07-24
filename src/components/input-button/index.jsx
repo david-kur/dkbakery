@@ -5,12 +5,14 @@ const InputButton = ({
   children,
   isGoogleSignIn,
   isInverted,
+  isDisabled,
   ...restProps
 }) => (
   <button
+    disabled={isDisabled}
     className={`${isInverted ? 'inverted' : ''} ${
       isGoogleSignIn ? 'google-sign-in' : ''
-    } input-button`}
+    } ${isDisabled ? 'is-disabled' : ''} input-button`}
     {...restProps}
   >
     {children}

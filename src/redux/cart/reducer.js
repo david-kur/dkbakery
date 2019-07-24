@@ -32,4 +32,9 @@ export const selectCartDropdownHidden = createSelector(
   cart => cart.hidden
 );
 
+export const selectTotalPriceInCart = createSelector(
+  [selectItemsInCart],
+  items => items.reduce((total, item) => total + item.qty * item.price, 0)
+);
+
 export default cartReducer;
