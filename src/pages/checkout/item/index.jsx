@@ -1,26 +1,34 @@
 import React from 'react';
 import './index.scss';
 import { connect } from 'react-redux';
-import { removeItem } from '../../../redux/cart/actions';
+import { removeItem, addItem, subtractItem } from '../../../redux/cart/actions';
 
-const CheckoutItem = ({
-  item: { imageUrl, name, qty, price, id },
-  removeItem
-}) => (
-  <div className="item">
-    <div className="image-container">
-      <img src={imageUrl} alt="item" />
+const CheckoutItem = ({ item, removeItem, addItem, subtractItem }) => {
+  const { imageUrl, name, qty, price, id } = item;
+  return (
+    <div className="item">
+      <div className="image-container">
+        <img src={imageUrl} alt="item" />
+      </div>
+      <span className="name">{name}</span>
+      <span className="qty">
+        <div className="arrow" onClick={() => subtractItem(id)}>
+          &#10094;
+        </div>
+        <span className="value">{qty}</span>
+        <div className="arrow" onClick={() => addItem(item)}>
+          &#10095;
+        </div>
+      </span>
+      <span className="price">${price}</span>
+      <div className="remove-button" onClick={() => removeItem(id)}>
+        &#10005;
+      </div>
     </div>
-    <span className="name">{name}</span>
-    <span className="qty">{qty}</span>
-    <span className="price">${price}</span>
-    <div className="remove-button" onClick={() => removeItem(id)}>
-      &#10005;
-    </div>
-  </div>
-);
+  );
+};
 
 export default connect(
   null,
-  { removeItem }
+  { removeItem, addItem, subtractItem }
 )(CheckoutItem);

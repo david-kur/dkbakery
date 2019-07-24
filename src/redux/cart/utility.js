@@ -7,3 +7,13 @@ export const addItemToCart = (items, itemToAdd) => {
   }
   return [...items, { ...itemToAdd, qty: 1 }];
 };
+
+export const subtractItemFromCart = (items, idToSubtract) => {
+  const existingItem = items.find(item => item.id === idToSubtract);
+  if (existingItem.qty === 1) {
+    return items.filter(item => item.id !== existingItem.id);
+  }
+  return items.map(item =>
+    item.id === idToSubtract ? { ...item, qty: item.qty - 1 } : item
+  );
+};
