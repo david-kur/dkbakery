@@ -7,25 +7,25 @@ const MENU_DATA = {
       {
         id: 1,
         name: 'Chocolate Chip Cookie',
-        imageUrl: '/images/cookies/choc.jpg',
+        imageUrl: 'https://i.ibb.co/TrBnkmg/choc.jpg',
         price: 5
       },
       {
         id: 2,
         name: 'Butter Milk Cookie',
-        imageUrl: '/images/cookies/butter.jpg',
+        imageUrl: 'https://i.ibb.co/zJKPnS4/butter.jpg',
         price: 4
       },
       {
         id: 3,
         name: 'Lemon Star Cookie',
-        imageUrl: '/images/cookies/lemon.jpg',
+        imageUrl: 'https://i.ibb.co/FJrTX51/lemon.jpg',
         price: 5
       },
       {
         id: 4,
         name: 'Macaroon Cookie',
-        imageUrl: '/images/cookies/macaroon.jpg',
+        imageUrl: 'https://i.ibb.co/Wkw04jm/macaroon.jpg',
         price: 6
       }
     ]
@@ -38,31 +38,31 @@ const MENU_DATA = {
       {
         id: 5,
         name: 'Chocolate Chiffon Cake',
-        imageUrl: '/images/cakes/chiffon.jpg',
+        imageUrl: 'https://i.ibb.co/WK35NDg/chiffon.jpg',
         price: 15
       },
       {
         id: 6,
         name: 'Chocolate Fudge Sponge Cake',
-        imageUrl: '/images/cakes/sponge.jpg',
+        imageUrl: 'https://i.ibb.co/vJdCQks/sponge.jpg',
         price: 17
       },
       {
         id: 7,
         name: 'Caramel Layered Cake',
-        imageUrl: '/images/cakes/layered.jpg',
+        imageUrl: 'https://i.ibb.co/3RtKBFv/layered.jpg',
         price: 20
       },
       {
         id: 8,
         name: 'Berries Flourless Cake',
-        imageUrl: '/images/cakes/flourless.jpg',
+        imageUrl: 'https://i.ibb.co/ys2nJKD/flourless.jpg',
         price: 17
       },
       {
         id: 9,
         name: 'Anniversary Cake',
-        imageUrl: '/images/cakes/anniv.jpg',
+        imageUrl: 'https://i.ibb.co/5Rhgwy3/anniv.jpg',
         price: 25
       }
     ]
@@ -75,37 +75,37 @@ const MENU_DATA = {
       {
         id: 10,
         name: 'Banana Bread',
-        imageUrl: '/images/breads/banana.jpg',
+        imageUrl: 'https://i.ibb.co/RSxw4NB/banana.jpg',
         price: 8
       },
       {
         id: 11,
         name: 'Blueberry Muffin',
-        imageUrl: '/images/breads/muffin.jpg',
+        imageUrl: 'https://i.ibb.co/NFxwzqc/muffin.jpg',
         price: 7
       },
       {
         id: 12,
         name: 'Classic Sourdough Bread',
-        imageUrl: '/images/breads/sourdough.jpg',
+        imageUrl: 'https://i.ibb.co/FVWwHZc/sourdough.jpg',
         price: 10
       },
       {
         id: 13,
         name: 'French Baguette',
-        imageUrl: '/images/breads/baguette.jpg',
+        imageUrl: 'https://i.ibb.co/0mDRxNf/baguette.jpg',
         price: 7
       },
       {
         id: 14,
         name: 'Wholewheat Cereal Bread',
-        imageUrl: '/images/breads/wholewheat.jpg',
+        imageUrl: 'https://i.ibb.co/0cZNz5q/wholewheat.jpg',
         price: 8
       },
       {
         id: 15,
         name: 'Croissant Sandwich',
-        imageUrl: '/images/breads/croissant.jpg',
+        imageUrl: 'https://i.ibb.co/CJp2Fh1/croissant.jpg',
         price: 12
       }
     ]
@@ -118,25 +118,25 @@ const MENU_DATA = {
       {
         id: 16,
         name: 'Raspberry Mango Pudding',
-        imageUrl: '/images/desserts/pudding.jpg',
+        imageUrl: 'https://i.ibb.co/WFg9YcN/pudding.jpg',
         price: 10
       },
       {
         id: 17,
         name: 'Caramel Mocha Ice Cream',
-        imageUrl: '/images/desserts/icecream.jpg',
+        imageUrl: 'https://i.ibb.co/84bK14b/icecream.jpg',
         price: 8
       },
       {
         id: 18,
         name: 'Berries Yogurt',
-        imageUrl: '/images/desserts/yogurt.jpg',
+        imageUrl: 'https://i.ibb.co/pbCww56/yogurt.jpg',
         price: 8
       },
       {
         id: 19,
         name: 'Strawberry Sundae',
-        imageUrl: '/images/desserts/sundae.jpg',
+        imageUrl: 'https://i.ibb.co/Y3HzzZj/sundae.jpg',
         price: 8
       }
     ]
@@ -149,37 +149,37 @@ const MENU_DATA = {
       {
         id: 20,
         name: 'Long Black Coffee',
-        imageUrl: '/images/drinks/longblack.jpg',
+        imageUrl: 'https://i.ibb.co/CmGmdJW/longblack.jpg',
         price: 3
       },
       {
         id: 21,
         name: 'Latte',
-        imageUrl: '/images/drinks/latte.jpg',
+        imageUrl: 'https://i.ibb.co/0C44JLT/latte.jpg',
         price: 4
       },
       {
         id: 22,
         name: 'Cappuccino',
-        imageUrl: '/images/drinks/cappuccino.jpg',
+        imageUrl: 'https://i.ibb.co/yXZVMrt/cappuccino.jpg',
         price: 4
       },
       {
         id: 23,
         name: 'Iced Chocolate Frappe',
-        imageUrl: '/images/drinks/icechoc.jpg',
+        imageUrl: 'https://i.ibb.co/cXZgCqc/icechoc.jpg',
         price: 5
       },
       {
         id: 24,
         name: 'Herbal Tea',
-        imageUrl: '/images/drinks/greentea.jpg',
+        imageUrl: 'https://i.ibb.co/5MbLfMc/greentea.jpg',
         price: 3
       },
       {
         id: 25,
         name: 'Fruit Smoothies',
-        imageUrl: '/images/drinks/smoothies.jpg',
+        imageUrl: 'https://i.ibb.co/TPHMYy2/smoothies.jpg',
         price: 7
       }
     ]

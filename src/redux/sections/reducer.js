@@ -6,33 +6,33 @@ const INITIAL_STATE = {
       id: 1,
       title: 'cookies',
       linkUrl: 'order/cookies',
-      imageUrl: '/images/cookies.jpg'
+      imageUrl: 'https://i.ibb.co/QXf3yY4/cookies.jpg'
     },
     {
       id: 2,
       title: 'cakes',
       linkUrl: 'order/cakes',
-      imageUrl: '/images/cakes.jpg'
+      imageUrl: 'https://i.ibb.co/8rq4TdG/cakes.jpg'
     },
     {
       id: 3,
       title: 'breads',
       linkUrl: 'order/breads',
-      imageUrl: '/images/breads.jpg'
+      imageUrl: 'https://i.ibb.co/Zm4MPfN/breads.jpg'
     },
     {
       id: 4,
       title: 'desserts',
       size: 'large',
       linkUrl: 'order/desserts',
-      imageUrl: '/images/dessert.jpg'
+      imageUrl: 'https://i.ibb.co/64xMGQ6/dessert.jpg'
     },
     {
       id: 5,
       title: 'drinks',
       size: 'large',
       linkUrl: 'order/drinks',
-      imageUrl: '/images/coffee.jpg'
+      imageUrl: 'https://i.ibb.co/y04pkWt/coffee.jpg'
     }
   ]
 };
