@@ -44,4 +44,33 @@ export const createUserProfile = async (userAuth, otherData) => {
   }
 };
 
+export const convertMenuSnapshotToMenuData = menu => {
+  const convertedMenu = menu.docs.map(doc => {
+    const { title, items } = doc.data();
+    return {
+      routeName: encodeURI(title.toLowerCase()),
+      id: doc.id,
+      title,
+      items
+    };
+  });
+  return convertedMenu.reduce((acc, menuItem) => {
+    acc[menuItem.title.toLowerCase()] = menuItem;
+    return acc;
+  }, {});
+};
+
+// only used to migrate data to firestore
+export const addMenuAndDocuments = async (collectionKey, objectsToAdd) => {
+  const collectionRef = firebaseFirestore.collection(collectionKey);
+  const batch = firebaseFirestore.batch();
+
+  objectsToAdd.forEach(obj => {
+    const newDocRef = collectionRef.doc();
+    batch.set(newDocRef, obj);
+  });
+
+  return await batch.commit();
+};
+
 export default firebase;

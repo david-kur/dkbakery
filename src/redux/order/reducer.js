@@ -1,12 +1,14 @@
 import { createSelector } from 'reselect';
-import MENU_DATA from './menu.data';
+import { UPDATE_MENU } from './types';
 
 const INITIAL_STATE = {
-  menu: MENU_DATA
+  menu: null
 };
 
-const orderReducer = (state = INITIAL_STATE, { type }) => {
+const orderReducer = (state = INITIAL_STATE, { type, payload }) => {
   switch (type) {
+    case UPDATE_MENU:
+      return { ...state, menu: payload };
     default:
       return state;
   }
@@ -23,12 +25,12 @@ export const selectMenu = createSelector(
 export const selectCategory = menuUrlParam =>
   createSelector(
     [selectMenu],
-    menu => menu[menuUrlParam]
+    menu => (menu ? menu[menuUrlParam] : null)
   );
 
 export const selectMenuForPreview = createSelector(
   [selectMenu],
-  menu => Object.keys(menu).map(key => menu[key])
+  menu => (menu ? Object.keys(menu).map(key => menu[key]) : [])
 );
 
 export default orderReducer;

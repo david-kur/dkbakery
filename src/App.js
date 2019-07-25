@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react';
 import './App.css';
+import { firebaseAuth, createUserProfile } from './firebase.config';
 import { Switch, Route, Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
+
 import Header from './components/header';
 import Home from './pages/home';
 import Order from './pages/order';
 import Auth from './pages/auth';
 import Checkout from './pages/checkout';
-import { firebaseAuth, createUserProfile } from './firebase.config';
-import { connect } from 'react-redux';
 import { setCurrentUser } from './redux/user/actions';
 import { selectCurrentUser } from './redux/user/reducer';
 
@@ -20,9 +21,8 @@ const App = ({ setCurrentUser, currentUser }) => {
         userReference.onSnapshot(snapshot => {
           setCurrentUser({ id: snapshot.id, ...snapshot.data() });
         });
-      } else {
-        setCurrentUser(user);
       }
+      setCurrentUser(user);
     });
     return () => {
       unsubFromAuth();
