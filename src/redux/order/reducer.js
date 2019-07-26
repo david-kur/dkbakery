@@ -1,14 +1,20 @@
 import { createSelector } from 'reselect';
-import { UPDATE_MENU } from './types';
+import OrderActionTypes from './types';
 
 const INITIAL_STATE = {
-  menu: null
+  menu: null,
+  error: '',
+  loading: false
 };
 
 const orderReducer = (state = INITIAL_STATE, { type, payload }) => {
   switch (type) {
-    case UPDATE_MENU:
-      return { ...state, menu: payload };
+    case OrderActionTypes.LOADING:
+      return { ...state, loading: true };
+    case OrderActionTypes.FETCH_MENU_SUCCESS:
+      return { ...state, menu: payload, loading: false };
+    case OrderActionTypes.FETCH_MENU_FAIL:
+      return { ...state, error: payload, loading: false };
     default:
       return state;
   }

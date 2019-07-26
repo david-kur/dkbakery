@@ -1,32 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
-import {
-  firebaseFirestore,
-  convertMenuSnapshotToMenuData
-} from '../../firebase.config';
 import Spinner from '../../components/spinner';
 import Menu from '../menu';
 import MenuOverview from '../../components/menu-overview';
-import { updateMenu } from '../../redux/order/actions';
+import { fetchMenu } from '../../redux/order/actions';
 
-const Order = ({ match, updateMenu }) => {
-  const [loading, setLoading] = useState(true);
+const Order = ({ match, loading, fetchMenu }) => {
   const MenuWithSpinner = Spinner(Menu);
   const MenuOverviewWithSpinner = Spinner(MenuOverview);
 
   useEffect(() => {
-    let unsubFromSnapshot = null;
-    const collectionRef = firebaseFirestore.collection('menu');
-    unsubFromSnapshot = collectionRef.onSnapshot(async snapshot => {
-      const menuData = convertMenuSnapshotToMenuData(snapshot);
-      updateMenu(menuData);
-      setLoading(false);
-    });
-    return () => {
-      unsubFromSnapshot();
-    };
-  }, [updateMenu]);
+    fetchMenu();
+  }, [fetchMenu]);
 
   return (
     <div>
@@ -45,7 +31,11 @@ const Order = ({ match, updateMenu }) => {
   );
 };
 
+const mapStateToProps = ({ order: { loading } }) => ({
+  loading
+});
+
 export default connect(
-  null,
-  { updateMenu }
+  mapStateToProps,
+  { fetchMenu }
 )(Order);
