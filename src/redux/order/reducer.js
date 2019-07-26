@@ -31,7 +31,7 @@ export const selectMenu = createSelector(
 export const selectCategory = menuUrlParam =>
   createSelector(
     [selectMenu],
-    menu => (menu ? menu[menuUrlParam] : null)
+    menu => (menu ? menu[menuUrlParam] : [])
   );
 
 export const selectMenuForPreview = createSelector(

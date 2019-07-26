@@ -4,15 +4,12 @@ import { connect } from 'react-redux';
 import { selectCategory } from '../../redux/order/reducer';
 import MenuItem from '../../components/menu-item';
 
-const Menu = ({ category }) => {
-  const { title, items } = category;
+const Menu = ({ category: { title, items } }) => {
   return (
     <div className="menu">
       <h2 className="title">{title}</h2>
       <div className="items">
-        {items.map(item => (
-          <MenuItem key={item.id} item={item} />
-        ))}
+        {items ? items.map(item => <MenuItem key={item.id} item={item} />) : ''}
       </div>
     </div>
   );
