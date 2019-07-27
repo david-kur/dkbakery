@@ -1,6 +1,5 @@
 .menu-preview {
-  display: flex;
-  flex-direction: column;
+  display: block;
   margin-bottom: 30px;
 
   .title {
@@ -11,7 +10,7 @@
 
   .preview {
     display: grid;
-    width: 90vw;
+    width: 100%;
     max-width: 1100px;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     grid-gap: 10px;
