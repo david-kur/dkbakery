@@ -11,7 +11,7 @@ import { selectCartDropdownHidden } from '../../redux/cart/reducer';
 
 const Header = ({ currentUser, cartDropdownHidden }) => (
   <div className="header">
-    <h2>
+    <h2 className="header-brand">
       <Link className="brand-container" to="/">
         DK Bakery
       </Link>
