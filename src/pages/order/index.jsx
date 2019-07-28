@@ -15,7 +15,7 @@ const Order = ({ match, loading, fetchMenu }) => {
   }, [fetchMenu]);
 
   return (
-    <div>
+    <>
       <Route
         exact
         path={`${match.path}`}
@@ -27,7 +27,7 @@ const Order = ({ match, loading, fetchMenu }) => {
         path={`${match.path}/:menuId`}
         render={props => <MenuWithSpinner isLoading={loading} {...props} />}
       />
-    </div>
+    </>
   );
 };
 

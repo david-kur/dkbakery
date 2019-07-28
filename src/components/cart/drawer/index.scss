@@ -1,0 +1,51 @@
+.cart {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 375px;
+  height: 100%;
+  overflow: scroll;
+  background-color: #f0f0f0;
+  z-index: 5;
+  padding: 15px;
+  transition: all 0.3s linear;
+  transform: translateX(100%);
+  visibility: visible;
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (max-width: 320px) {
+    width: 320px;
+  }
+
+  &.drawer-open {
+    transform: translateX(0);
+  }
+
+  .close-drawer {
+    cursor: pointer;
+    font-size: 20px;
+    margin: 10px 0 30px;
+    text-align: left;
+    &:hover {
+      color: #b6b6b6;
+    }
+  }
+
+  .cart-items {
+    margin: 20px auto;
+    .empty-cart {
+      font-size: 16px;
+    }
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    text-align: center;
+
+    .input-button {
+      margin: 5px 60px;
+    }
+  }
+}

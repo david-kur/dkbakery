@@ -1,4 +1,10 @@
-import { TOGGLE_CART, ADD_ITEM, REMOVE_ITEM, SUBTRACT_ITEM } from './types';
+import {
+  TOGGLE_CART,
+  ADD_ITEM,
+  REMOVE_ITEM,
+  SUBTRACT_ITEM,
+  CLEAR_CART
+} from './types';
 import { addItemToCart, subtractItemFromCart } from './utility';
 import { createSelector } from 'reselect';
 const INITIAL_STATE = { hidden: true, items: [] };
@@ -16,6 +22,12 @@ const cartReducer = (state = INITIAL_STATE, { type, payload }) => {
         ...state,
         items: state.items.filter(item => item.id !== payload)
       };
+    case CLEAR_CART:
+      return {
+        ...state,
+        items: []
+      };
+
     default:
       return state;
   }

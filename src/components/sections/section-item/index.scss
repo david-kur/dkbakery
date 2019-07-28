@@ -17,11 +17,15 @@
       transition: transform 3s cubic-bezier(0.25, 0.45, 0.45, 0.95);
     }
     & .content {
-      opacity: 0.7;
+      background-color: #707070;
+      opacity: 0.8;
+      .title {
+        color: white;
+      }
     }
   }
   &.large {
-    height: 320px;
+    height: 280px;
 
     @media screen and (max-width: 900px) {
       height: 240px;

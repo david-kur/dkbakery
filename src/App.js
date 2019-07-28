@@ -32,16 +32,18 @@ const App = ({ setCurrentUser, currentUser }) => {
   return (
     <div>
       <Header />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route exact path="/checkout" component={Checkout} />
-        <Route path="/order" component={Order} />
-        <Route
-          exact
-          path="/signin"
-          render={() => (currentUser ? <Redirect to="/" /> : <Auth />)}
-        />
-      </Switch>
+      <div className="main">
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/checkout" component={Checkout} />
+          <Route path="/order" component={Order} />
+          <Route
+            exact
+            path="/signin"
+            render={() => (currentUser ? <Redirect to="/" /> : <Auth />)}
+          />
+        </Switch>
+      </div>
     </div>
   );
 };

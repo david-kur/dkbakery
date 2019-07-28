@@ -4,7 +4,7 @@ import './index.scss';
 import { firebaseAuth } from '../../firebase.config';
 import { connect } from 'react-redux';
 import CartIcon from '../cart/icon';
-import CartDropdown from '../cart/dropdown';
+import CartDrawer from '../cart/drawer';
 import { createStructuredSelector } from 'reselect';
 import { selectCurrentUser } from '../../redux/user/reducer';
 import { selectCartDropdownHidden } from '../../redux/cart/reducer';
@@ -44,7 +44,7 @@ const Header = ({ currentUser, cartDropdownHidden }) => (
         </li>
       </ul>
     </div>
-    {cartDropdownHidden ? null : <CartDropdown />}
+    <CartDrawer isOpen={cartDropdownHidden} />
   </div>
 );
 
