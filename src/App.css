@@ -1,4 +1,5 @@
 body {
+  min-width: 320px;
   font-family: 'Quattrocento Sans', sans-serif;
   padding: 20px 60px;
 }

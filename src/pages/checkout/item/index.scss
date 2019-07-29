@@ -1,16 +1,30 @@
 .item {
   width: 100%;
   display: flex;
-  min-height: 100px;
+  min-height: 80px;
   border-bottom: 1px solid darkgrey;
   padding: 15px 0;
   font-size: 20px;
   align-items: center;
 
+  @media screen and (max-width: 600px) {
+    font-size: 15px;
+  }
+
+  @media screen and (max-width: 450px) {
+    display: grid;
+    grid-template-columns: auto 70px 70px 30px;
+    grid-gap: 5px;
+    grid-template-areas:
+      'image-container name name name'
+      'image-container price qty remove';
+  }
+
   .image-container {
-    width: 20%;
-    height: 100px;
+    width: 95px;
+    height: 80px;
     padding-right: 15px;
+    grid-area: image-container;
 
     img {
       width: 100%;
@@ -21,15 +35,21 @@
   .name {
     width: 42%;
     padding: 0 15px;
+    @media screen and (max-width: 450px) {
+      width: 100%;
+      grid-area: name;
+    }
   }
 
   .qty,
   .price {
     width: 16%;
+    grid-area: price;
   }
 
   .qty {
     display: flex;
+    grid-area: qty;
 
     .arrow {
       cursor: pointer;
@@ -41,6 +61,8 @@
   }
 
   .remove-button {
+    content: 'remove';
+    grid-area: remove;
     cursor: pointer;
     padding-left: 10px;
   }

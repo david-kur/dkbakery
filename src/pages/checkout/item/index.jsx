@@ -6,11 +6,12 @@ import { removeItem, addItem, subtractItem } from '../../../redux/cart/actions';
 const CheckoutItem = ({ item, removeItem, addItem, subtractItem }) => {
   const { imageUrl, name, qty, price, id } = item;
   return (
-    <div className="item">
+    <span className="item">
       <div className="image-container">
         <img src={imageUrl} alt="item" />
       </div>
       <span className="name">{name}</span>
+      <span className="price">${price}</span>
       <span className="qty">
         <div className="arrow" onClick={() => subtractItem(id)}>
           &#10094;
@@ -20,11 +21,10 @@ const CheckoutItem = ({ item, removeItem, addItem, subtractItem }) => {
           &#10095;
         </div>
       </span>
-      <span className="price">${price}</span>
       <div className="remove-button" onClick={() => removeItem(id)}>
         &#10005;
       </div>
-    </div>
+    </span>
   );
 };
 

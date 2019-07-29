@@ -1,15 +1,26 @@
 .auth {
   border: 1px solid #afafaf;
   border-radius: 10px;
-  width: 800px;
   display: flex;
   justify-content: space-between;
   margin: 10px auto;
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
+
+  @media screen and (max-width: 450px) {
+    border: none;
+  }
 }
 
 .sign-in-up {
   margin: 20px auto;
   width: 300px;
+
+  @media screen and (max-width: 350px) {
+    width: auto;
+  }
 
   .buttons {
     text-align: center;
