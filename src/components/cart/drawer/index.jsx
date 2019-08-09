@@ -9,7 +9,7 @@ import { selectItemsInCart } from '../../../redux/cart/reducer';
 import { selectTotalPriceInCart } from '../../../redux/cart/reducer';
 
 const CartDrawer = ({
-  isOpen,
+  isHidden,
   items,
   toggleCart,
   clearCart,
@@ -17,7 +17,7 @@ const CartDrawer = ({
   history
 }) => {
   return (
-    <div className={`cart ${isOpen ? 'drawer-open' : ''}`}>
+    <div className={`cart ${isHidden ? '' : 'drawer-open'}`}>
       <div className="close-drawer" onClick={toggleCart}>
         &#10008;
       </div>

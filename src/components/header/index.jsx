@@ -44,7 +44,7 @@ const Header = ({ currentUser, cartDropdownHidden }) => (
         </li>
       </ul>
     </div>
-    <CartDrawer isOpen={cartDropdownHidden} />
+    <CartDrawer isHidden={cartDropdownHidden} />
   </div>
 );
 
